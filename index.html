@@ -4,13 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUKIS</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="512x512" href="./assets/android-chrome-512x512.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="mstile-150x150.png">
     <link href="./output.css" rel="stylesheet">
+    <script src="./index.js" defer async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        @keyframes leftToRight {
+            0% {
+                left: -150px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        @keyframes rightToLeft {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -150px;
+            }
+        }
+
+        /* @keyframes moveOut {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+
+        .move-out {
+            animation: moveOut 1s forwards;
+        } */
+
+        .animate-leftToRight {
+            animation: leftToRight 0.5s ease forwards, rightToLeft 0.5s ease 2s forwards;
+        }
+
+        .addbg {
+            background-image: url("./assets/");
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    <main class="bg-[#cdcdcd] h-dvh w-screen flex items-center justify-center relative overflow-hidden"
+        id="click_me_ref">
+
+        <!--^ DARK MODE -->
+        <div class="absolute z-50 hidden bg-black h-screen w-screen text-slate-500" id="dark_mode_div">
+            <div class="absolute bottom-0 left-0 ">
+                <img src="./assets/yasminpeach.jpg" alt="Yasmin" class="h-28 w-28">
+                <p behavior="scroll" direction="left">credits sa mga pics</p>
+            </div>
+
+            <p>@kukis_is_not_defined</p>
+
+        </div>
+
+        <div class="w-screen relative flex justify-center items-center flex-col h-screen">
+            <button id="dark_mode" class="bg-black text-white p-2 rounded absolute top-5 hidden">Dark Mode</button>
+
+
+            <!--^ PASKO NANAMAN -->
+            <!-- <div class="absolute w-full bottom-0 -left-60" id="jose">
+                <p>practice laang....</p>
+                <img src="./assets/jose.png" width="100px" height="100px">
+            </div> -->
+
+
+            <div class="hidden z-20" id="rocket">
+                <button id="rocketButton" class="bg-red-400 rounded p-2">matapang ka?</button>
+            </div>
+
+            <!--^ MATAPANG KABA? -->
+            <img src="./assets/redppill.jpg" class="hidden" id="matapang">
+
+            <!--^ JOLLIBEE -->
+            <img src="./assets/jollibee.jpg" class="hidden" id="jollibee">
+
+            <!--^ LENGLENG -->
+            <img src="./assets/lengleng.png" class="hidden w-44 h-44" id="lengleng">
+
+            <!--^ PAKYU -->
+            <img src="./assets/pakyu.jpg" class="hidden w-44 h-44" id="pakyu">
+        </div>
+
+
+        <div class="absolute -bottom-10 right-0 cursor-pointer" id="pusa">
+
+            <!--^ ANGRY CAT 😂 -->
+            <div class="hidden absolute z-40 border" id="show_modal">
+                <img src="./assets/anoba.png" class="h-52 w-52">
+            </div>
+
+            <button
+                class="absolute right-4 top-6 rounded-t-3xl rounded-br-3xl bg-blue-400 text-sm p-2 font-medium text-white"
+                id="click_me">
+                Wag magulo
+            </button>
+            <img src="./assets/catsleep.png" class="animate-pulse h-52 w-52" alt="Cat Sleeping">
+        </div>
+    </main>
 </body>
 
 </html>
