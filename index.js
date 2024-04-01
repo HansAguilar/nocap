@@ -21,7 +21,6 @@ const pakyu = document.getElementById("pakyu");
 
 rocketButton.addEventListener("click", () => {
     rocketButton.classList.add("hidden")
-    darkMode.classList.remove("hidden");
     matapang.classList.remove("hidden");
 
     matapang.classList.add("block");
@@ -37,13 +36,14 @@ rocketButton.addEventListener("click", () => {
         jollibee.classList.add("hidden");
         lengleng.classList.remove("hidden");
         lengleng.classList.add("block");
-    }, 4000)
+    }, 3500)
 
     setTimeout(() => {
         lengleng.classList.add("hidden");
         pakyu.classList.remove("hidden");
         pakyu.classList.add("block");
-    }, 6000)
+        darkMode.classList.remove("hidden");
+    }, 5000)
 
 
     // rocketButton.classList.add("move-out");
